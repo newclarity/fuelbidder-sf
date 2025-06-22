@@ -1,0 +1,10 @@
+Name,Street_Address__c,City__c,State__c,Zip_Code__c,Site_Contact_Name__c,Site_Contact_Phone__c,Location_Hours__c,Is_Manned__c,Is_Locked__c,Primary_Location__c,Active__c,Account__c
+"Metro Construction - Downtown Site","1234 K Street NW","Washington","DC","20005","Mike Johnson","(202) 555-0111","Mon-Fri 6AM-6PM",TRUE,TRUE,TRUE,TRUE,"Metro Construction LLC"
+"Metro Construction - Georgetown Project","2500 M Street NW","Washington","DC","20037","Sarah Williams","(202) 555-0112","Mon-Sat 7AM-5PM",TRUE,TRUE,FALSE,TRUE,"Metro Construction LLC"
+"Capitol Builders - Bethesda Office","5678 Wisconsin Ave","Bethesda","MD","20814","Tom Anderson","(301) 555-0113","Mon-Fri 8AM-5PM",TRUE,FALSE,TRUE,TRUE,"Capitol Builders Inc"
+"Capitol Builders - Silver Spring Site","8901 Georgia Ave","Silver Spring","MD","20910","Lisa Chen","(301) 555-0114","Mon-Fri 6AM-4PM",FALSE,TRUE,FALSE,TRUE,"Capitol Builders Inc"
+"NoVa Development - Fairfax HQ","9012 Lee Highway","Fairfax","VA","22030","David Brown","(703) 555-0115","Mon-Fri 7AM-6PM",TRUE,FALSE,TRUE,TRUE,"NoVa Development Group"
+"NoVa Development - Tysons Project","1234 Tysons Blvd","McLean","VA","22102","Jennifer Davis","(703) 555-0116","Mon-Sat 6AM-8PM",TRUE,TRUE,FALSE,TRUE,"NoVa Development Group"
+"Potomac Infrastructure - Main Yard","3456 Constitution Ave","Washington","DC","20001","Robert Wilson","(202) 555-0117","24/7","TRUE",TRUE,TRUE,TRUE,"Potomac Infrastructure"
+"DC Highway - Equipment Depot","7890 New York Ave","Washington","DC","20002","Amanda Taylor","(202) 555-0118","Mon-Fri 6AM-6PM",TRUE,TRUE,TRUE,TRUE,"DC Highway Dept"
+"Riverside Manufacturing - Plant 1","2468 Industrial Blvd","Alexandria","VA","22314","Chris Martinez","(703) 555-0119","Mon-Fri 6AM-10PM",TRUE,TRUE,TRUE,TRUE,"Riverside Manufacturing"

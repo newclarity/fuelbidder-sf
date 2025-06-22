@@ -1,0 +1,5 @@
+Name,Account_Type__c,Type,BillingStreet,BillingCity,BillingState,BillingPostalCode,Phone,Website
+"Diamond Fuel Delivery","Fuel_Delivery","Fuel_Delivery","1100 Fuel Terminal Dr","Baltimore","MD","21224","(410) 555-0201","www.diamondfuel.com"
+"Capital Energy Services","Fleet_Company","Fleet_Company","2200 Energy Way","Arlington","VA","22201","(703) 555-0202","www.capitalenergy.com"
+"Metro Petroleum LLC","Owner_Operator","Owner_Operator","3300 Truck Stop Ln","Laurel","MD","20707","(301) 555-0203","www.metropetroleum.com"
+"Chesapeake Fuel Co","Fleet_Company","Fleet_Company","4400 Bay Bridge Rd","Annapolis","MD","21401","(410) 555-0204","www.chesapeakefuel.com"

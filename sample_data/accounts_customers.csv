@@ -1,0 +1,7 @@
+Name,Account_Type__c,Type,BillingStreet,BillingCity,BillingState,BillingPostalCode,Phone,Website
+"Metro Construction LLC","Construction","Construction","1234 K Street NW","Washington","DC","20005","(202) 555-0101","www.metroconstruction.com"
+"Capitol Builders Inc","Construction","Construction","5678 Wisconsin Ave","Bethesda","MD","20814","(301) 555-0102","www.capitolbuilders.com"
+"NoVa Development Group","Construction","Construction","9012 Lee Highway","Fairfax","VA","22030","(703) 555-0103","www.novadevelopment.com"
+"Potomac Infrastructure","Government","Government","3456 Constitution Ave","Washington","DC","20001","(202) 555-0104","www.potomacinfra.gov"
+"DC Highway Dept","Government","Government","7890 New York Ave","Washington","DC","20002","(202) 555-0105","www.dchighway.gov"
+"Riverside Manufacturing","Manufacturing","Manufacturing","2468 Industrial Blvd","Alexandria","VA","22314","(703) 555-0106","www.riverside-mfg.com"

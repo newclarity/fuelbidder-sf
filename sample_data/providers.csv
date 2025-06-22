@@ -1,0 +1,5 @@
+Name,Insurance_Certificate_Number__c,Insurance_Expiration_Date__c,Safety_Rating__c,Service_Regions__c,Fleet_Size__c,Active_Provider__c,Minimum_Order_Gallons__c,Account__c
+"Diamond Fuel Provider Details","INS-001-DF","2025-12-31",4.8,"Washington_DC;Maryland;Northern_Virginia",12,TRUE,500,"Diamond Fuel Delivery"
+"Capital Energy Provider Details","INS-002-CE","2025-11-30",4.6,"Washington_DC;Northern_Virginia",8,TRUE,750,"Capital Energy Services"
+"Metro Petroleum Provider Details","INS-003-MP","2025-10-31",4.9,"Maryland;Washington_DC",3,TRUE,250,"Metro Petroleum LLC"
+"Chesapeake Provider Details","INS-004-CF","2026-01-31",4.7,"Maryland;Delaware",15,TRUE,1000,"Chesapeake Fuel Co"
