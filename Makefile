@@ -54,7 +54,7 @@ create-scratch:
 
 deploy:
 	@echo "📦 Deploying FuelBidder code to scratch org..."
-	sf project deploy start --target-org $(SCRATCH_ORG_ALIAS)
+	sf project deploy start --target-org $(SCRATCH_ORG_ALIAS) --ignore-conflicts
 	@echo "✅ Deployment complete!"
 
 open:

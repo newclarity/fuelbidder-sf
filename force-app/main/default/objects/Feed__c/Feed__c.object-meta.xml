@@ -6,6 +6,6 @@
         <label>Feed Name</label>
         <type>Text</type>
     </nameField>
-    <pluralLabel>Feeds</pluralLabel>
+    <pluralLabel>Feed</pluralLabel>
     <sharingModel>ReadWrite</sharingModel>
 </CustomObject>
