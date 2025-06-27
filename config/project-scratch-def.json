@@ -4,8 +4,7 @@
   "features": ["EnableSetPasswordInApi", "FieldService"],
   "settings": {
     "lightningExperienceSettings": {
-      "enableS1DesktopEnabled": true,
-      "enableLightningPreviewPref": true
+      "enableS1DesktopEnabled": true
     },
     "mobileSettings": {
       "enableS1EncryptedStoragePref2": false
