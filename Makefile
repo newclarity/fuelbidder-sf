@@ -22,6 +22,7 @@ help:
 	@echo "Scratch Org Commands:"
 	@echo "  create-scratch   - Create new scratch org"
 	@echo "  deploy           - Deploy code to scratch org"
+	@echo "  assign-perms     - Assign all permission sets to user"
 	@echo "  open             - Open scratch org in browser"
 	@echo "  reset            - Delete current scratch org and create fresh one"
 	@echo "  clean            - Delete scratch org"
@@ -57,6 +58,15 @@ deploy:
 	sf project deploy start --target-org $(SCRATCH_ORG_ALIAS) --ignore-conflicts
 	@echo "✅ Deployment complete!"
 
+assign-perms:
+	@echo "🔐 Assigning permission sets..."
+	-sf org assign permset --name FuelBidder_Tabs --target-org $(SCRATCH_ORG_ALIAS)
+	-sf org assign permset --name FuelBidder_Admin --target-org $(SCRATCH_ORG_ALIAS)
+	-sf org assign permset --name FuelBidder_Dispatcher --target-org $(SCRATCH_ORG_ALIAS)
+	-sf org assign permset --name FuelBidder_Owner --target-org $(SCRATCH_ORG_ALIAS)
+	-sf org assign permset --name FuelBidder_SalesRep --target-org $(SCRATCH_ORG_ALIAS)
+	@echo "✅ Permission sets assigned!"
+
 open:
 	@echo "🌐 Opening scratch org in browser..."
 	sf org open --target-org $(SCRATCH_ORG_ALIAS)
@@ -66,14 +76,14 @@ clean:
 	-sf org delete scratch --target-org $(SCRATCH_ORG_ALIAS) --no-prompt
 	@echo "✅ Scratch org deleted!"
 
-reset: clean create-scratch deploy
+reset: clean create-scratch deploy assign-perms
 	@echo "🔄 Scratch org reset complete!"
 
 # Development Workflow Commands
-dev: create-scratch deploy open
+dev: create-scratch deploy assign-perms open
 	@echo "🎉 Development environment ready!"
 
-redeploy: deploy
+redeploy: deploy assign-perms
 	@echo "🔄 Code redeployed!"
 
 # Utility Commands
@@ -99,4 +109,4 @@ fresh: reset
 new: create-scratch
 up: deploy open
 
-.PHONY: help auth setup-devhub create-config create-scratch deploy open clean reset dev redeploy status list-orgs fresh new up
+.PHONY: help auth setup-devhub create-config create-scratch deploy assign-perms open clean reset dev redeploy status list-orgs fresh new up
