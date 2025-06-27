@@ -1,7 +1,7 @@
 {
   "orgName": "FuelBidder Dev Org",
   "edition": "Developer",
-  "features": ["EnableSetPasswordInApi"],
+  "features": ["EnableSetPasswordInApi", "FieldService"],
   "settings": {
     "lightningExperienceSettings": {
       "enableS1DesktopEnabled": true,
