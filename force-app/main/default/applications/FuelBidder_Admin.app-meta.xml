@@ -12,16 +12,16 @@
     <isOmniPinnedViewEnabled>false</isOmniPinnedViewEnabled>
     <label>FuelBidder Admin</label>
     <navType>Standard</navType>
-    <tabs>Feed__c</tabs>
+    <tabs>standard-Dashboard</tabs>
+    <tabs>standard-Lead</tabs>
     <tabs>standard-Account</tabs>
     <tabs>standard-Contact</tabs>
     <tabs>standard-Order</tabs>
     <tabs>standard-Invoice</tabs>
     <tabs>Provider__c</tabs>
     <tabs>Driver__c</tabs>
-    <tabs>standard-Lead</tabs>
+    <tabs>Feed__c</tabs>
     <tabs>standard-report</tabs>
-    <tabs>standard-Dashboard</tabs>
     <uiType>Lightning</uiType>
     <utilityBar>FuelBidder_UtilityBar</utilityBar>
 </CustomApplication>

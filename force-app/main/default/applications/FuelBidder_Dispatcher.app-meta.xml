@@ -13,11 +13,10 @@
     <label>FuelBidder Dispatcher</label>
     <navType>Standard</navType>
     <tabs>Feed__c</tabs>
-    <tabs>standard-Order</tabs>
-    <tabs>Driver__c</tabs>
-    
     <tabs>standard-Account</tabs>
     <tabs>standard-Contact</tabs>
+    <tabs>standard-Order</tabs>
+    <tabs>Driver__c</tabs>
     <tabs>Provider__c</tabs>
     <tabs>standard-report</tabs>
     <tabs>standard-Dashboard</tabs>
