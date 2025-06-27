@@ -818,14 +818,8 @@
         <enabled>true</enabled>
         <name>WorkCalibrationUser</name>
     </userPermissions>
-    <tabVisibilities>
-        <tab>Location__c</tab>
-        <visibility>DefaultOn</visibility>
-    </tabVisibilities>
-    <tabVisibilities>
-        <tab>Tank__c</tab>
-        <visibility>DefaultOn</visibility>
-    </tabVisibilities>
+    
+    
     <tabVisibilities>
         <tab>Provider__c</tab>
         <visibility>DefaultOn</visibility>
@@ -835,11 +829,19 @@
         <visibility>DefaultOn</visibility>
     </tabVisibilities>
     <tabVisibilities>
-        <tab>Fuel_Order__c</tab>
+        <tab>Feed__c</tab>
         <visibility>DefaultOn</visibility>
     </tabVisibilities>
-    <tabVisibilities>
-        <tab>Fuel_Order_Item__c</tab>
-        <visibility>DefaultOn</visibility>
-    </tabVisibilities>
+    
+    
+    <applicationVisibilities>
+        <application>FuelBidder_Admin</application>
+        <default>true</default>
+        <visible>true</visible>
+    </applicationVisibilities>
+    <applicationVisibilities>
+        <application>FuelBidder_Dispatcher</application>
+        <default>false</default>
+        <visible>true</visible>
+    </applicationVisibilities>
 </Profile>
