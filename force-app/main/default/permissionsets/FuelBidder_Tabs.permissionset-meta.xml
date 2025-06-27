@@ -1,9 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <applicationVisibilities>
+        <application>FuelBidder_Admin</application>
+        <visible>true</visible>
+    </applicationVisibilities>
+    <applicationVisibilities>
+        <application>FuelBidder_Dispatcher</application>
+        <visible>true</visible>
+    </applicationVisibilities>
     <description>Grants access to FuelBidder custom object tabs</description>
+    <hasActivationRequired>false</hasActivationRequired>
     <label>FuelBidder Tabs</label>
     <tabSettings>
-        <tab>Provider__c</tab>
+        <tab>standard-Lead</tab>
+        <visibility>Visible</visibility>
+    </tabSettings>
+    <tabSettings>
+        <tab>standard-Account</tab>
+        <visibility>Visible</visibility>
+    </tabSettings>
+    <tabSettings>
+        <tab>standard-Contact</tab>
+        <visibility>Visible</visibility>
+    </tabSettings>
+    <tabSettings>
+        <tab>standard-Order</tab>
+        <visibility>Visible</visibility>
+    </tabSettings>
+    <tabSettings>
+        <tab>standard-Invoice</tab>
+        <visibility>Visible</visibility>
+    </tabSettings>
+    <tabSettings>
+        <tab>standard-report</tab>
+        <visibility>Visible</visibility>
+    </tabSettings>
+    <tabSettings>
+        <tab>standard-Dashboard</tab>
+        <visibility>Visible</visibility>
+    </tabSettings>
+    <tabSettings>
+        <tab>Feed__c</tab>
         <visibility>Visible</visibility>
     </tabSettings>
     <tabSettings>
@@ -11,7 +48,7 @@
         <visibility>Visible</visibility>
     </tabSettings>
     <tabSettings>
-        <tab>Fuel_Order__c</tab>
+        <tab>Provider__c</tab>
         <visibility>Visible</visibility>
     </tabSettings>
 </PermissionSet>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <applicationVisibilities>
+        <application>FuelBidder_Admin</application>
+        <visible>true</visible>
+    </applicationVisibilities>
+    <applicationVisibilities>
+        <application>FuelBidder_Dispatcher</application>
+        <visible>true</visible>
+    </applicationVisibilities>
+    <label>FuelBidder Owner</label>
+</PermissionSet>
