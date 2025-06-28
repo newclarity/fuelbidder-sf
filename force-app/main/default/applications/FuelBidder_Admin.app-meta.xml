@@ -17,6 +17,7 @@
     <tabs>standard-Account</tabs>
     <tabs>standard-Contact</tabs>
     <tabs>standard-Order</tabs>
+    <tabs>standard-WorkOrder</tabs>
     <tabs>standard-Invoice</tabs>
     <tabs>Provider__c</tabs>
     <tabs>Driver__c</tabs>
