@@ -3,7 +3,7 @@
 
 # Configuration
 DEVHUB_ALIAS = DevHub
-SCRATCH_ORG_ALIAS = fuelbidder-dev
+ORG_ALIAS = fuelbidder-dev
 SCRATCH_DAYS = 30
 PROJECT_SCRATCH_DEF = config/project-scratch-def.json
 
@@ -31,6 +31,10 @@ help:
 	@echo "  dev              - Create scratch org and deploy (one command setup)"
 	@echo "  redeploy         - Deploy changes to existing scratch org"
 	@echo ""
+	@echo "Demo Data Commands:"
+	@echo "  load-demo        - Load modular demo data in sequence"
+	@echo "  test-demo        - Full test: create org, deploy, load demo data"
+	@echo ""
 	@echo "Utility Commands:"
 	@echo "  status           - Show current scratch org status"
 	@echo "  list-orgs        - List all active scratch orgs"
@@ -49,31 +53,31 @@ create-config:
 
 # Scratch Org Management
 create-scratch:
-	@echo "🚀 Creating scratch org '$(SCRATCH_ORG_ALIAS)'..."
-	sf org create scratch --definition-file $(PROJECT_SCRATCH_DEF) --alias $(SCRATCH_ORG_ALIAS) --duration-days $(SCRATCH_DAYS) --set-default
+	@echo "🚀 Creating scratch org '$(ORG_ALIAS)'..."
+	sf org create scratch --definition-file $(PROJECT_SCRATCH_DEF) --alias $(ORG_ALIAS) --duration-days $(SCRATCH_DAYS) --set-default
 	@echo "✅ Scratch org created successfully!"
 
 deploy:
 	@echo "📦 Deploying FuelBidder code to scratch org..."
-	sf project deploy start --target-org $(SCRATCH_ORG_ALIAS) --ignore-conflicts
+	sf project deploy start --target-org $(ORG_ALIAS) --ignore-conflicts
 	@echo "✅ Deployment complete!"
 
 assign-perms:
 	@echo "🔐 Assigning permission sets..."
-	-sf org assign permset --name FuelBidder_Tabs --target-org $(SCRATCH_ORG_ALIAS)
-	-sf org assign permset --name FuelBidder_Admin --target-org $(SCRATCH_ORG_ALIAS)
-	-sf org assign permset --name FuelBidder_Dispatcher --target-org $(SCRATCH_ORG_ALIAS)
-	-sf org assign permset --name FuelBidder_Owner --target-org $(SCRATCH_ORG_ALIAS)
-	-sf org assign permset --name FuelBidder_SalesRep --target-org $(SCRATCH_ORG_ALIAS)
+	-sf org assign permset --name FuelBidder_Tabs --target-org $(ORG_ALIAS)
+	-sf org assign permset --name FuelBidder_Admin --target-org $(ORG_ALIAS)
+	-sf org assign permset --name FuelBidder_Dispatcher --target-org $(ORG_ALIAS)
+	-sf org assign permset --name FuelBidder_Owner --target-org $(ORG_ALIAS)
+	-sf org assign permset --name FuelBidder_SalesRep --target-org $(ORG_ALIAS)
 	@echo "✅ Permission sets assigned!"
 
 open:
 	@echo "🌐 Opening scratch org in browser..."
-	sf org open --target-org $(SCRATCH_ORG_ALIAS)
+	sf org open --target-org $(ORG_ALIAS)
 
 clean:
-	@echo "🗑️  Deleting scratch org '$(SCRATCH_ORG_ALIAS)'..."
-	-sf org delete scratch --target-org $(SCRATCH_ORG_ALIAS) --no-prompt
+	@echo "🗑️  Deleting scratch org '$(ORG_ALIAS)'..."
+	-sf org delete scratch --target-org $(ORG_ALIAS) --no-prompt
 	@echo "✅ Scratch org deleted!"
 
 reset: clean create-scratch deploy assign-perms
@@ -89,7 +93,7 @@ redeploy: deploy assign-perms
 # Utility Commands
 status:
 	@echo "📊 Current scratch org status:"
-	sf org display --target-org $(SCRATCH_ORG_ALIAS)
+	sf org display --target-org $(ORG_ALIAS)
 
 list-orgs:
 	@echo "📋 Active scratch orgs:"
@@ -104,9 +108,19 @@ auth: setup-devhub create-config
 	@echo "1. Enable DevHub in your Salesforce org (Setup → Dev Hub → Enable)"
 	@echo "2. Run 'make dev' to create your first scratch org"
 
+# Load modular demo data (idempotent)
+load-demo:
+	./scripts/load-demo.sh $(ORG_ALIAS)
+
+# Test the modular approach
+test-demo: create-scratch deploy assign-perms load-demo
+	@echo "✅ Modular demo data test complete!"
+	./scripts/load-demo.sh fuelbidder-test
+	#@$(MAKE) open
+
 # Development cycle aliases for convenience
 fresh: reset
 new: create-scratch
 up: deploy open
 
-.PHONY: help auth setup-devhub create-config create-scratch deploy assign-perms open clean reset dev redeploy status list-orgs fresh new up
+.PHONY: help auth setup-devhub create-config create-scratch deploy assign-perms open clean reset dev redeploy status list-orgs fresh new up load-demo test-demo
